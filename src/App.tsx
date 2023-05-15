@@ -1,9 +1,9 @@
 import './App.css';
-import AdminMainView from './view/Admin/MainView';
+import MainView from './view/Main';
 
 function App() {
   return (
-    <AdminMainView />
+    <MainView />
   );
 }
 
