@@ -6,7 +6,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useState } from 'react'
 import { LATEST_INFORMATION } from 'src/mock'
 
-export default function index() {
+export default function LatesInformationList() {
     const [age, setAge] = useState<string>('');
 
     const handleChange = (event: SelectChangeEvent) => {

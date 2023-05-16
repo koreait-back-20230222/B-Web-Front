@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
 
 export default function Navigation() {
     
+    const navigator = useNavigate();
 
     return (
         <Box display='flex' height='7.5vh' bgcolor='#153F4D' justifyContent='space-between' alignItems='center' p='0 10vw'>
@@ -10,7 +12,7 @@ export default function Navigation() {
             </Box>
             <Box>
                 <Box display='flex' color='#ffffff'>
-                    <Typography mr='1vw'>로그인</Typography>
+                    <Typography className='hover' mr='1vw' onClick={() => navigator('/sign-up')}>로그인</Typography>
                     <Typography>회원가입</Typography>
                 </Box>
             </Box>
