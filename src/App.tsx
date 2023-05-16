@@ -12,8 +12,8 @@ function App() {
     <Box sx={{whiteSpace: 'pre-wrap'}}>
       <Navigation />
       <Jumbotron />
-      {/* <SignIn /> */}
-      <SignUp />
+      <SignIn />
+      {/* <SignUp /> */}
       {/* <MiddleNavigation />
       <Divider />
       <MainView /> */}
