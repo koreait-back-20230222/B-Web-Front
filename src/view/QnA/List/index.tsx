@@ -1,9 +1,8 @@
-import { Box, Pagination, Divider, FormControl, InputLabel, Select, SelectChangeEvent, MenuItem, IconButton } from '@mui/material'
+import { Box, Button, Divider, FormControl, InputLabel, Select, SelectChangeEvent, MenuItem } from '@mui/material'
 import ArticleIcon from '@mui/icons-material/Article';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import CommentIcon from '@mui/icons-material/Comment';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import CreateIcon from '@mui/icons-material/Create';
 import { useState } from 'react'
 import { LATEST_INFORMATION } from 'src/mock'
 
@@ -14,11 +13,14 @@ export default function LatesInformationList() {
         setAge(event.target.value as string);
     };
     return (
-        <Box p='0 10vw' mt='2.5vh'>
-            <Box p='0 2.5vw' display='flex' justifyContent='space-between' alignItems='center'>
-                <FormControl sx={{ width: '100px' }}>
+        <Box>
+            <Box display='flex' justifyContent='space-between' alignItems='center'>
+                <Button></Button>
+                <FormControl>
                     <InputLabel id="demo-simple-select-label">정렬</InputLabel>
                     <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
                         value={age}
                         label="Age"
                         onChange={handleChange}
@@ -28,11 +30,8 @@ export default function LatesInformationList() {
                         <MenuItem value={30}>Thirty</MenuItem>
                     </Select>
                 </FormControl>
-                <IconButton>
-                    <CreateIcon />
-                </IconButton>
             </Box>
-            <Box display='flex' p='4px' mt='2.5vh' mb='1vh'>
+            <Box display='flex' p='4px'>
                 <Box flex='1' display='flex' justifyContent='center' alignItems='center'>번호</Box>
                 <Box flex='6' display='flex' justifyContent='center' alignItems='center'>게시물 제목</Box>
                 <Box flex='2' display='flex' justifyContent='center' alignItems='center'>작성자</Box>
@@ -42,7 +41,7 @@ export default function LatesInformationList() {
             </Box>
             <Divider />
             {LATEST_INFORMATION.map(item => (
-                <Box className='hover' display='flex' p='4px' mt='1vh' pb='1vh' borderBottom='1px solid rgba(0, 0, 0, 0.05)'>
+                <Box display='flex' p='4px'>
                     <Box flex='1' display='flex' justifyContent='center' alignItems='center'>{item.informationBoardNumber}</Box>
                     <Box flex='6' display='flex' justifyContent='center' alignItems='center'>{item.informationBoardTitle}</Box>
                     <Box flex='2' display='flex' justifyContent='center' alignItems='center'>{item.boardWriterNickname}</Box>
@@ -51,9 +50,6 @@ export default function LatesInformationList() {
                     <Box flex='1' display='flex' justifyContent='center' alignItems='center'>{item.heartCount}</Box>
                 </Box>
             ))}
-            <Box mt='2.5vh' display='flex' justifyContent='center'>
-                <Pagination count={10} />
-            </Box>
         </Box>
     )
 }

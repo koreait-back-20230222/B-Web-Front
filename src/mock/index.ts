@@ -1,4 +1,3 @@
-
 export const LATEST_INFORMATION = [
     {
         informationBoardNumber: 1,
@@ -145,3 +144,28 @@ export const QNA = [
         hashtag: ['java']
     },
 ]
+
+export const LATEST_INFORMATION_DETAIL = {
+    informationBoardNumber: 1,
+    informationBoardTitle: '최신 정보 게시판 첫번째 게시물입니다.',
+    informationBoardContent: '안녕하세요! 최신정보 게시판의 첫번째 게시물입니다.',
+    informationBoardImageUrl: 'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1682317827/noticon/qpkreb5q3sp6kkwxodjh.png',
+    writeDatetime: '2023-04-28 23:12:02',
+    viewCount: 10,
+    writerNickname: 'MINJU',
+	writerEmail: 'qwer@naver.com',
+    writerProfileImageUrl: 'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1682317827/noticon/qpkreb5q3sp6kkwxodjh.png',
+    commentList: [
+		{
+			informationCommentNumber: 1,
+			informationBoardNumber: 1,
+			commentContent: '첫 게시물의 첫번째 댓글.',
+			writerNickname: 'NORI',
+			writerProfileImageUrl: 'https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1672488839/noticon/b41fuvhflaazvsl0pkoj.png',
+			writeDatetime: '2023-04-28 23:13:11'
+		}
+    ],
+    heartCount: 15,
+	boardHashtag: ['java', 'spring'],
+	contentSource: 'internet'
+}
