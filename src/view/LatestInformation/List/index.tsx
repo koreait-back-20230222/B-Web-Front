@@ -6,8 +6,11 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import CreateIcon from '@mui/icons-material/Create';
 import { useState } from 'react'
 import { LATEST_INFORMATION } from 'src/mock'
+import { useNavigate } from 'react-router-dom';
 
 export default function LatesInformationList() {
+
+    const navigator = useNavigate();
     const [age, setAge] = useState<string>('');
 
     const handleChange = (event: SelectChangeEvent) => {
@@ -28,7 +31,7 @@ export default function LatesInformationList() {
                         <MenuItem value={30}>Thirty</MenuItem>
                     </Select>
                 </FormControl>
-                <IconButton>
+                <IconButton onClick={() => navigator('/lates-information/post')}>
                     <CreateIcon />
                 </IconButton>
             </Box>

@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Box, Typography } from '@mui/material';
+import { PATH } from 'src/constant';
 
 export default function Navigation() {
 
@@ -12,8 +13,8 @@ export default function Navigation() {
             </Box>
             <Box>
                 <Box display='flex' color='#ffffff'>
-                    <Typography className='hover' mr='1vw' onClick={() => navigator('/sign-in')}>로그인</Typography>
-                    <Typography className='hover' onClick={() => navigator('/sign-up')}>회원가입</Typography>
+                    <Typography className='hover' mr='1vw' onClick={() => navigator(PATH.SIGN_IN)}>로그인</Typography>
+                    <Typography className='hover' onClick={() => navigator(PATH.SIGN_UP)}>회원가입</Typography>
                 </Box>
             </Box>
         </Box>

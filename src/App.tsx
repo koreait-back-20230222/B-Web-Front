@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 import './App.css';
@@ -10,10 +11,15 @@ import SignIn from './view/Authentication/SignIn';
 import SignUp from './view/Authentication/SignUp';
 import LatesInformationList from './view/LatestInformation/List';
 import LatesInformationDetail from './view/LatestInformation/Detail';
+import LatesInformationWrite from './view/LatestInformation/Write';
 
 function App() {
 
   const path = useLocation();
+
+  // useEffect(() => {
+  //   alert(path.pathname);
+  // }, [path.pathname]);
 
   return (
     <Box sx={{whiteSpace: 'pre-wrap'}}>
@@ -31,6 +37,7 @@ function App() {
         <Route path='/lates-information'>
           <Route index element={<LatesInformationList />} />
           <Route path=':boardNumber' element={<LatesInformationDetail />} />
+          <Route path='post' element={<LatesInformationWrite />} />
         </Route>
       </Routes>
     </Box>
